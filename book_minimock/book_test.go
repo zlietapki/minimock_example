@@ -7,7 +7,7 @@ import (
 )
 
 // Игнорировать параметры, просто возвращать что сказано
-func TestBook_CountBooks_ignore_params(t *testing.T) {
+func TestBook_CountByAuthor_ignore_params(t *testing.T) {
 	// init
 	mc := minimock.NewController(t)
 	defer mc.Finish() // нужно для проверки "все ли моки были вызваны хоть раз"
@@ -31,7 +31,7 @@ func TestBook_CountBooks_ignore_params(t *testing.T) {
 }
 
 // Ожидать определенных параметров
-func TestBook_CountBooks_expect_params(t *testing.T) {
+func TestBook_CountByAuthor_expect_params(t *testing.T) {
 	// init
 	mc := minimock.NewController(t)
 	defer mc.Finish()
@@ -56,7 +56,7 @@ func TestBook_CountBooks_expect_params(t *testing.T) {
 }
 
 // When/Then альтернатива Expect/Return
-func TestBook_CountBooks_when_then(t *testing.T) {
+func TestBook_CountByAuthor_when_then(t *testing.T) {
 	// init
 	mc := minimock.NewController(t)
 	defer mc.Finish()
@@ -91,7 +91,7 @@ func TestBook_CountBooks_when_then(t *testing.T) {
 }
 
 // Вычислять ответ из параметров и (возможно) проверять сами параметры
-func TestBook_CountBooks_inspect_params(t *testing.T) {
+func TestBook_CountByAuthor_inspect_params(t *testing.T) {
 	// init
 	mc := minimock.NewController(t)
 	defer mc.Finish()
